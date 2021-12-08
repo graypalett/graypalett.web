@@ -84,6 +84,9 @@ header {
 .por_title img {
   margin-left: 8px;
 }
+.rightarrow {
+  width: 80px;
+}
 
 .swiper-container {
   width: 100%;
