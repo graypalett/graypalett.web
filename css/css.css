@@ -35,6 +35,9 @@ header {
   justify-content: center;
 }
 
+.header img {
+  width: 260px;
+}
 /* header _ contact  */
 
 .contact_header {
