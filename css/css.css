@@ -1,347 +1,140 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-.notosanskr * {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
 body {
   background-color: #f1f1f1;
-  font-family: "Noto Sans KR", sans-serif;
-  color: #222;
-  font-size: 16px;
-  cursor: url("../img/cursor.png"), auto;
+  width: 100%;
+  height: 100%;
 }
 .wrap {
   width: 1000px;
   margin: 0 auto;
 }
-/* menu */
-.menu {
-  display: none;
-}
-/* menu */
-
-/* header */
-
 header {
-  height: 80px;
+  width: 100%;
+  height: 56px;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
+
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
-
-.header img {
-  width: 260px;
-}
-/* header _ contact  */
-
-.contact_header {
-  text-align: right;
-  color: #666;
-  font-size: 1em;
-}
-
-.contact_header p {
-  margin-bottom: 4px;
-}
-
-/* intro start */
-
-.intro {
-  margin-top: 62px;
-}
-
-.intro p:first-of-type {
-  font-size: 1.3em;
-  width: 55%;
+.header .current_page {
   color: #777;
-  margin-bottom: 8px;
+}
+.header p {
+  padding: 8px;
+  font-size: 1.375em;
 }
 
-.intro p.eng {
+.header a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #222;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  /* menu밑에 밑줄 생기는 css */
+}
+
+.header a:hover::after {
+  transform: scaleX(1);
+  transform-origin: 50% 100%;
+  /* 가운데부터 밑줄 생기는 css */
+}
+
+/* header end */
+
+.logo {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  background-image: url(../img/logo.png);
+  background-size: 437px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 437px;
+  height: 101px;
+  margin: 100px auto 80px;
+  transition: all 0.5s linear 0.1s;
+}
+
+.logo:hover {
+  background-image: url(../img/logo_hover.png);
+}
+
+h1.index_intro {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #777;
+  line-height: 30px;
+}
+h2.index_eng {
+  width: 440px;
+  margin: 26px auto 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.125em;
   color: #999;
-  width: 60%;
-  font-size: 1.2em;
-  font-weight: 200;
+  line-height: 22px;
 }
 
-.intro .bold {
-  font-weight: bold;
+b {
+  font-weight: 500 !important;
   color: #222;
 }
 
-.dot {
-  margin: 100px auto 80px;
-}
-
-/* intro end */
-/* portfolio_slide start */
-
-.portfolio {
-  margin-bottom: 80px;
-}
-
-.por_title {
-  display: flex;
-  flex-direction: row;
-  font-size: 1.3em;
-}
-.por_title p {
-  margin-left: 8px;
-  font-size: 1em;
-  font-weight: lighter;
-}
-.por_title img {
-  margin-left: 8px;
-}
-
-.rightarrow {
-  width: 80px;
-}
-
-.swiper-container {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-top: 24px;
-}
-.swiper-slide {
-  text-align: center;
-  display: flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
-  flex-direction: column;
-  align-items: center; /* 위아래 기준 중앙정렬 */
-  justify-content: center; /* 좌우 기준 중앙정렬 */
-}
-.swiper-slide img {
-  max-width: 100%;
-  /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
-  /* 이 예제에서 필요해서 설정했습니다. 상황에따라 다를 수 있습니다. */
-}
-
-.swiper-slide p {
-  margin-top: 8px;
-  margin-right: auto;
-  padding-left: 8px;
-  font-size: 1.125em;
-}
-
-/* portfolio_slide end */
-
-.hr {
-  width: 100%;
-  height: 1px;
-  background-color: #222;
-}
-
-/* 보유기술 start */
-
-.start_title {
+/* intro_text end */
+#portfolio {
   margin-top: 80px;
-  font-size: 2em;
-  font-weight: 600;
+}
+.portfolio {
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  margin-top: 12px;
 }
-
-.back_circle {
-  border: 1px solid #222;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4px;
-}
-
-.bottom_line {
-  border-bottom: 1px solid #222;
-}
-
-.tech_info {
-  margin: 40px auto 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.tech {
-  width: 25%;
-  margin-right: 2%;
-}
-
-.tech h3 {
-  font-size: 0.875em;
-  margin-bottom: 12px;
-}
-
-.tech h2 {
-  font-size: 1.375em;
-  margin-bottom: 12px;
-}
-
-.tech_kr {
-  margin-bottom: 24px;
-  font-size: 0.875em;
-}
-
-.tech_en {
-  color: #777;
-  font-weight: 200;
-  line-height: 1.2em;
-}
-
-/* contact us start */
-
-.contact {
-  margin: 80px auto;
-  display: flex;
-  align-items: flex-start;
-}
-.contact h1 {
-  font-size: 2em;
-  font-weight: 600;
-  margin-bottom: 40px;
+.portfolio_content {
+  position: relative;
   margin-right: 12px;
+  overflow: hidden;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-direction: alternate;
+  transition: all 0.5s;
 }
-.contact img {
-  margin-right: 24px;
+.portfolio_content:last-of-type {
+  margin-right: 0;
 }
-.contact .kakao {
-  padding: 8px 16px;
-  color: #ffe500;
-  background-color: #222;
-  margin-right: 24px;
+.portfolio_content img {
+  width: 100%;
+}
+.port_inner {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.6s;
 }
 
-/* contact us end */
-/* footer */
+.port_inner p {
+  color: #fff;
+}
+.portfolio_content:hover .port_inner {
+  top: 0px;
+}
 
 footer {
   width: 100%;
-  height: 130px;
+  margin-top: 80px;
+  padding-top: 80px;
+  border-top: 1px solid #222;
   text-align: center;
-  background-color: #333;
-  color: #fff;
-  font-size: 0.8em;
-}
-
-footer img {
-  width: 109px;
-  margin: 12px auto 24px;
-}
-
-footer p {
-  margin-bottom: 4px;
-}
-
-footer .copyright {
-  opacity: 0.8;
-  margin-top: 12px;
-}
-
-/* 반응형 */
-/* ------------------- max width 1024px ------------------*/
-
-@media (max-width: 1300px) and (max-width: 1024px) {
-  .swiper-container {
-    padding: 0 12px;
-    margin: 24px auto;
-  }
-}
-@media (max-width: 1024px) and (min-width: 768px) {
-  .wrap {
-    width: 720px;
-  }
-  .swiper-container {
-    padding: 0 12px;
-    margin: 24px auto;
-  }
-}
-
-/* ------------------- max width 768px ------------------*/
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    overflow-x: hidden;
-  }
-  .wrap {
-    width: 94%;
-    margin: 24px auto;
-  }
-
-  header {
-    margin-bottom: 24px;
-  }
-  header img {
-    width: 170px;
-  }
-
-  .contact_header {
-    display: none;
-  }
-  /* menu */
-  /* intro */
-
-  .intro {
-    width: 94%;
-  }
-  .intro p:first-of-type {
-    width: 100%;
-  }
-
-  .intro p.eng {
-    width: 96%;
-    margin-bottom: 80px;
-  }
-
-  .dot.wrap {
-    margin-bottom: 80px;
-  }
-
-  /* 보유기술 */
-  .tech_info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .tech {
-    width: 50%;
-    margin-top: 40px;
-  }
-  .tech:first-of-type {
-    margin-top: 80px;
-  }
-  .tech:nth-child(2n) {
-    text-align: right;
-    margin-left: auto;
-  }
-  .tech:last-of-type {
-    margin-bottom: 80px;
-  }
-
-  /* contact us */
-  .contact {
-    margin: 80px auto;
-    flex-direction: column;
-  }
-  .contact img {
-    display: none;
-  }
-  .contact .kakao {
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 400px) {
-  .swiper-container {
-    width: 350px;
-    margin: 24px auto;
-  }
 }

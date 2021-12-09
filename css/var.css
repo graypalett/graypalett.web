@@ -1,10 +1,21 @@
+@font-face {
+  font-family: "GyeonggiBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 body {
-  font-family: Helvetica, "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo",
-    "Apple SD 산돌고딕 Neo", "Microsoft NeoGothic", "Droid sans", sans-serif;
+  cursor: url("../img/cursor.png"), auto;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* margin-bottom */
-
+.ml8 {
+  margin-left: 8px;
+}
 .mb8 {
   margin-bottom: 8px;
 }
