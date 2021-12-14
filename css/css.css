@@ -1,13 +1,24 @@
+html,
 body {
   background-color: #f1f1f1;
   width: 100%;
   height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.inner {
+  flex: 1;
 }
 .wrap {
   width: 1000px;
   margin: 0 auto;
 }
 header {
+  font-family: "GyeonggiBatang";
   width: 100%;
   height: 56px;
   display: flex;
@@ -134,7 +145,99 @@ b {
 footer {
   width: 100%;
   margin-top: 80px;
-  padding-top: 80px;
+  padding: 24px 0;
   border-top: 1px solid #222;
   text-align: center;
+}
+
+/* ********** about *********** */
+
+.about {
+  width: 800px;
+  margin: 160px auto 62px;
+}
+
+.about .about_logo {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  width: 284px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  line-height: 20px;
+  color: #333;
+}
+
+/* about intro end */
+
+.about_tech {
+  padding-top: 80px;
+  border-top: 1px solid #222;
+}
+
+.about_tech .wrap {
+  display: flex;
+}
+.tech {
+  width: 25%;
+  margin-right: 24px;
+  font-size: 0.875em;
+}
+
+.tech:last-of-type {
+  margin-right: 0;
+}
+
+.tech_subtitle {
+  font-family: "GyeonggiBatang";
+  margin-bottom: 16px;
+}
+
+.tech_title {
+  font-size: 1.375em;
+  margin-bottom: 4px;
+}
+
+.tech .script_kr {
+  margin-bottom: 12px;
+  line-height: 21px;
+}
+
+.tech .script_en {
+  font-family: "GyeonggiBatang";
+  color: #777;
+}
+
+/* ***********contact us*************** */
+
+.contact {
+  margin-top: 160px;
+}
+
+.contact h1 {
+  font-size: 3.25em;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+
+.kakao_chat {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #ffe500;
+  margin-bottom: 24px;
+}
+
+.contact p {
+  line-height: 22px;
+}
+
+.contact p:first-of-type {
+  margin-bottom: 24px;
+}
+
+.email,
+.tel {
+  font-family: "GyeonggiBatang";
 }
