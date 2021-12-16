@@ -12,6 +12,11 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+:root {
+  --serif-font: "GyeonggiBatang";
+  --default-font: "Noto Sans KR", sans-serif;
+}
+
 /* margin-bottom */
 .ml8 {
   margin-left: 8px;

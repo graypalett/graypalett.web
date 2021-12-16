@@ -18,7 +18,7 @@ body {
   margin: 0 auto;
 }
 header {
-  font-family: "GyeonggiBatang";
+  font-family: var(--serif-font);
   width: 100%;
   height: 56px;
   display: flex;
@@ -97,20 +97,19 @@ b {
 }
 
 /* intro_text end */
-#portfolio {
-  margin-top: 80px;
-}
+
 .portfolio {
+  margin-top: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 12px;
 }
 .portfolio_content {
   position: relative;
-  margin-right: 12px;
   overflow: hidden;
-  width: 33%;
+  width: 32%;
+  margin-bottom: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,23 +120,32 @@ b {
   margin-right: 0;
 }
 .portfolio_content img {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
   width: 100%;
 }
 .port_inner {
+  font-family: var(--serif-font);
   position: absolute;
-  top: 200px;
+  top: 400px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.6s;
 }
-
 .port_inner p {
   color: #fff;
 }
+.port_inner p:first-of-type {
+  font-size: 1.4em;
+  margin-bottom: 4px;
+}
+
 .portfolio_content:hover .port_inner {
   top: 0px;
 }
@@ -178,10 +186,10 @@ footer {
 
 .about_tech .wrap {
   display: flex;
+  justify-content: space-around;
 }
 .tech {
-  width: 25%;
-  margin-right: 24px;
+  width: 23%;
   font-size: 0.875em;
 }
 
@@ -190,7 +198,7 @@ footer {
 }
 
 .tech_subtitle {
-  font-family: "GyeonggiBatang";
+  font-family: var(--serif-font);
   margin-bottom: 16px;
 }
 
@@ -205,7 +213,7 @@ footer {
 }
 
 .tech .script_en {
-  font-family: "GyeonggiBatang";
+  font-family: var(--serif-font);
   color: #777;
 }
 
@@ -239,5 +247,73 @@ footer {
 
 .email,
 .tel {
-  font-family: "GyeonggiBatang";
+  font-family: var(--serif-font);
+}
+
+/* ------------ @media query ------------- */
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+  .wrap {
+    width: 720px;
+  }
+
+  .portfolio_content {
+    width: 48%;
+    margin-bottom: 14px;
+  }
+  /* index end */
+
+  .about {
+    width: 600px;
+  }
+  .tech {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 720px) {
+  /* 모바일호환  */
+  .wrap {
+    width: 95%;
+  }
+
+  .logo {
+    width: 280px;
+    background-image: url(../img/logo_hover.png);
+    background-size: 280px;
+  }
+
+  h1.index_intro {
+    font-size: 1.25em;
+  }
+  h2.index_eng {
+    width: 95%;
+  }
+  .portfolio {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  .portfolio_content {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  /* index end */
+
+  .about {
+    width: 90%;
+  }
+
+  .about_tech .wrap {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .tech {
+    width: 45%;
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
 }
