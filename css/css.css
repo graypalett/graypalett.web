@@ -127,7 +127,7 @@ b {
 .port_inner {
   font-family: var(--serif-font);
   position: absolute;
-  top: 400px;
+  top: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
